@@ -237,31 +237,23 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Authentic human handwriting inherently possesses rich variations, and these subtle differences endow the text with vitality and realism. 
+            However, when text is digitized into computer fonts, identical characters appear rigid and monotonous, entirely losing the natural fluctuations of handwriting.
+            To break the limitations of digital typography, this research explores a handwriting generation framework based on Vision-Language Models (VLMs), 
+            aiming to guide standard computer fonts to produce natural variations with handwritten characteristics.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            This method leverages the cross-modal semantic understanding capabilities of VLMs (such as FontCLIP) to drive font deformation. 
+            Nevertheless, during the research process, it was discovered that directly applying existing models often leads to excessive deformation, resulting in the collapse of core structures and the critical issue of "losing the essence of the original font." 
+            To resolve this technical bottleneck, this study introduces fine-grained local feature control and rigorous evaluation mechanisms into the generation framework,
+            specifically implementing quantitative testing for deformations in key structures, such as the lower components of the characters.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            By combining the visual feature space with local structural constraints, 
+            the proposed model successfully preserves the core essence of the reference font while simultaneously endowing it with diverse handwritten characteristics.
+            Experimental results indicate that, under strict evaluation metrics for local deformation, 
+            our method effectively mitigates the distortion defects observed in baseline models. 
+            This research not only successfully extends standard computer fonts into the domain of highly variable handwriting but also provides an innovative solution for future personalized font synthesis and emotion-driven text generation.
           </p>
         </div>
       </div>
