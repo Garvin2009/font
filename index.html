@@ -247,23 +247,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Authentic human handwriting inherently possesses rich variations, and these subtle differences endow the text with vitality and realism. 
-            However, when text is digitized into computer fonts, identical characters appear rigid and monotonous, entirely losing the natural fluctuations of handwriting.
-            To break the limitations of digital typography, this research explores a handwriting generation framework based on Vision-Language Models (VLMs), 
-            aiming to guide standard computer fonts to produce natural variations with handwritten characteristics.
-          </p>
-          <p>
-            This method leverages the cross-modal semantic understanding capabilities of VLMs (such as FontCLIP) to drive font deformation. 
-            Nevertheless, during the research process, it was discovered that directly applying existing models often leads to excessive deformation, resulting in the collapse of core structures and the critical issue of "losing the essence of the original font." 
-            To resolve this technical bottleneck, this study introduces fine-grained local feature control and rigorous evaluation mechanisms into the generation framework,
-            specifically implementing quantitative testing for deformations in key structures, such as the lower components of the characters.
-          </p>
-          <p>
-            By combining the visual feature space with local structural constraints, 
-            the proposed model successfully preserves the core essence of the reference font while simultaneously endowing it with diverse handwritten characteristics.
-            Experimental results indicate that, under strict evaluation metrics for local deformation, 
-            our method effectively mitigates the distortion defects observed in baseline models. 
-            This research not only successfully extends standard computer fonts into the domain of highly variable handwriting but also provides an innovative solution for future personalized font synthesis and emotion-driven text generation.
+            Prompt-driven font editing is an emerging application of vision-language mod- els in graphics. The recent FontCLIP couples cross-modal semantic alignment with differentiable rasterization to optimize a glyph’s Bézier control points at in- ference time, editing it into attribute-specific styles such as thin or bold from a prompt. Such methods, however, have been validated mainly on Latin computer typefaces; Chinese characters appear only as a single illustrative glyph, with neither systematic treatment nor quantitative evaluation, leaving Chinese handwriting edit- ing—structurally more complex and carrying personal style—unexplored. Using FontCLIP as its base framework, this study presents a systematic evaluation and optimization of VLM-based Chinese handwriting editing. Twenty representative characters were optimized on a handwriting font against a thin computer typeface under three prompts for 120 trials, with a systematic loss-weight search yielding a reproducible hyperparameter configuration. To address the original method’s lack of quantitative evaluation, we adopt the direction cosine, a metric aligned with Font- CLIP’s training direction loss, to measure how well a glyph’s movement in seman- tic space aligns with the target direction. Across all combinations, glyphs consis- tently moved toward the intended direction: thin and bold were stable, whereas the more abstract relaxed prompt was markedly weaker, reflecting a cross-cultural gap in FontCLIP’s Western-dominated training data. Closed contours, rather than stroke count alone, were the key factor limiting quality—open-contour characters deformed stably while closed-contour ones collapsed under thin optimization—and semantic alignment and visual legibility proved to be two independent dimensions. Overall, the adopted metric, the hyperparameter configuration established here, and the ability-boundary analysis fill this gap for Chinese handwriting editing.
           </p>
         </div>
       </div>
@@ -291,9 +275,9 @@
     <div class="columns is-centered">
 
       <!-- Visual Effects. -->
-      <!--<div class="column">
+      <<div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">Computer Font</h2>
           <p>
             Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
             would be impossible without nerfies since it would require going through a wall.
@@ -303,12 +287,12 @@
                     type="video/mp4">
           </video>
         </div>
-      </div>-->
+      </div>
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <!--<div class="column">
-        <h2 class="title is-3">Matting</h2>
+      <div class="column">
+        <h2 class="title is-3">Handwriting Font</h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>
@@ -318,14 +302,13 @@
             <video id="matting-video" controls playsinline height="100%">
               <source src="./static/videos/matting.mp4"
                       type="video/mp4">
-            </video>-
+            </video>
           </div>
-
-        </div>-->
+        </div>
       </div>
-    </div>
+    
     <!--/ Matting. -->
-
+    </div>
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
