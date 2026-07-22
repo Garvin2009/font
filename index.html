@@ -253,7 +253,13 @@
       </div>
     </div>
     <!--/ Abstract. -->
-
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="./static/images/Fontclip流程圖.svg"/>
+        </div>
+      </div>
+    </section>
     <!-- Paper video. -->
 <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -274,46 +280,30 @@
 
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
-      <<div class="column">
-        <div class="content">
-          <h2 class="title is-3">Computer Font</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Handwriting Font</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
+      <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <video id="teaser" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/mu_optimization.mp4" type="video/mp4">
             </video>
+            <h2 class="subtitle has-text-centered">
+              以自然語言提示詞驅動的字形優化過程：「木」字的貝茲控制點在推論階段隨提示詞逐步演化。
+              <br>
+              <span class="is-italic">The glyph "木" evolving under a prompt: B&eacute;zier control points are optimized at inference time toward the target attribute.</span>
+            </h2>
           </div>
         </div>
-      </div>
+      </section>
     
     <!--/ Matting. -->
     </div>
     <!-- Animation. -->
-    <div class="columns is-centered">
+   <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Animation</h2>
-
+-->
         <!-- Interpolating. -->
     <!--    <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
