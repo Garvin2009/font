@@ -252,6 +252,13 @@
       <div class="container is-max-desktop">
         <div class="hero-body">
           <img src="./static/images/Fontclip流程圖.svg"/>
+          <p>          The glyph's TrueType outline is parsed and elevated to a unified cubic B&eacute;zier
+            representation. At each iteration the control points are rendered by a differentiable
+            rasterizer into an image, encoded by CLIP, and compared with the target prompt through a
+            <em>direction loss</em> <span class="is-family-code">L = &minus;cos(d<sub>image</sub>,
+            d<sub>text</sub>)</span>; the gradient flows back through the renderer to update the control
+            points. No model is retrained: editing happens entirely at inference time on frozen FontCLIP
+            weights. We re-tune the loss weights for Chinese handwriting via a two-round parameter search.</p>
         </div>
       </div>
     </section>
